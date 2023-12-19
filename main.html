@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #bdb8ce;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 320px;
+        background-color: #6a1b9a;
+        border: 2px solid #ffeb3b;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 125px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      img {
+        width: 40px;
+        border: 2px solid #ffeb3b;
+        border-radius: 50px;
+        padding: 12px;
+        border-width: 5px;
+      }
+      .move-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .main-heading {
+        color: #ffeb3b;
+        font-size: 25px;
+
+        font-weight: bolder;
+        text-shadow: 1px 1px #ffeb3b;
+      }
+      .moves,
+      .result,
+      .js-score {
+        color: #ffeb3b;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+
+        /* margin-bottom: 10px; */
+        /* width: 10px; */
+      }
+      .reset-score {
+        /* border: 3px solid yellow;
+            background-color: #6A1B9A;
+            color: #FFEB3B;
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 10px; */
+        background-color: #ffeb3b;
+        color: #6a1b9a;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 50px;
+        font-size: 20px;
+        font-weight: 900;
+      }
+      /* .mov{
+            display: flex;
+            justify-content: baseline;
+            /* text-align: center; */
+
+      /* .icons{
+            margin-left: 5px;
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="main-heading">PICK A MOVE</p>
+      <button onclick="playerMove('rock');" class="move-button">
+        <img src="images/rock-icon.png" alt="" class="icons" />
+      </button>
+      <button onclick="playerMove('paper');" class="move-button">
+        <img src="images/paper-icon.png" alt="" class="icons" />
+      </button>
+      <button onclick="playerMove('scissors');" class="move-button">
+        <img src="images/scissors-icon.png" alt="" class="icons" />
+      </button>
+      <!-- <div class="mov"> -->
+      <p class="moves">--</p>
+      <p class="result">--</p>
+      <p class="js-score"></p>
+      <button
+        onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        "
+        class="reset-score"
+      >
+        reset score
+      </button>
+      <!-- </div> -->
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
